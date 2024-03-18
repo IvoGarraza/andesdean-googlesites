@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+        body {
+            width: 100%;
+            height: 100vh;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+
+        .subContainer {
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: end;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .imgContainer img {
+            width: 100%;
+        }
+
+        /*         .imgContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+        img {
+            /* width: 50%; */
+            filter: grayscale(1);
+        }
+
+        img:hover {
+            filter: grayscale(0);
+        }
+
+        span {
+            font-weight: normal;
+        }
+
+        .spans {
+            width: 100%;
+            font-size: 1rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .span1 {
+            width: max-content;
+        }
+
+        .imgContainerBussines img {
+            width: 50%;
+        }
+
+        .imgContainer div {
+            position: relative;
+        }
+
+        .subImgContainer .desc {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            z-index: 2;
+            font-size: large;
+            visibility: hidden;
+        }
+
+        .subImgContainer:hover {
+            .desc {
+                visibility: visible;
+                background: #0000004e;
+                color: white;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            img {
+                filter: grayscale(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="subContainer">
+            <div class="imgContainer">
+                <div class="subImgContainer">
+                    <span class="desc">Nahola<br />Structural Engineer</span>
+                    <img src="https://ca.slack-edge.com/T42HA9JJF-U04SLAWESCS-59a17957afaf-512" />
+                </div>
+            </div>
+        </div>
+        <div class="subContainer">
+            <div class="imgContainer" style="display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 2px;
+            grid-row-gap: 2px;
+            ">
+                <div class="subImgContainer">
+                    <img src="https://ca.slack-edge.com/T42HA9JJF-U0357SGBF1T-8451feab56a6-512" />
+                    <span class="desc" style="font-weight: bold;">Aldo<br /><span>Structural Engineer</span></span>
+                </div>
+                <div class="subImgContainer">
+                    <img src="https://i.postimg.cc/FRHHw0Ph/Foto-perfil.jpg" />
+                    <span class="desc">Carolina<br />Structural Engineer</span>
+                </div>
+                <div class="subImgContainer">
+                    <img src="https://ca.slack-edge.com/T42HA9JJF-U04P347ND8D-b0788daeeb74-512" />
+                    <span class="desc">Nahola Funes<br />Structural Engineer</span>
+                </div>
+                <div class="subImgContainer">
+                    <img src="https://i.postimg.cc/Gtsd1Kvn/Foto-carnet.png" />
+                    <span class="desc">Nahola Funes<br />Structural Engineer</span>
+                </div>
+            </div>
+        </div>
+        <div class="subContainer">
+            <div class="imgContainerBussines" style="display: flex;
+            ">
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U052V33DT32-c8e7097b6f2a-512" />
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U035P0VHT4H-529e78424158-512" />
+            </div>
+        </div>
+        <div class="subContainer">
+            <div class="imgContainer" style="display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 2px;
+            grid-row-gap: 2px;
+            img{width: 100%;}">
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U5CTK8ZKJ-f55173f0a867-512" />
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U05217UU4AZ-4efa633d4627-512" />
+                <img src="https://ca.slack-edge.com/T42HA9JJF-UPTMQUY8N-a0adaa100732-512" />
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U5DK88GFN-ad547219404a-512" />
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

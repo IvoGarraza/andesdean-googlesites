@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--divinectorweb.com-->
+<head>
+	<meta charset="UTF-8">
+	<title>Client Slider using only HTML and CSS</title>
+	<link href="style.css" rel="stylesheet">
+    <style>
+        * {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #0b69ed;
+	height: 100vh;
+}
+.slider-area h2 {
+	text-align: center;
+	font-family: impact;
+	font-size: 60px;
+	font-weight: 500;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin: 100px 0 30px 0;
+	color: #fff;
+}
+.wrapper {
+	display: flex;
+	width: 750px;
+	margin: 0 auto;
+	overflow: hidden;
+	border-radius: 180px;
+	padding: 2.5rem;
+	background: #ddd;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.item {
+	animation: animate 25s alternate linear infinite;
+}
+.item img{
+    width: 40%;
+}
+.container:hover .item {
+	animation-play-state: paused;
+}
+@keyframes animate {
+	0% {
+		transform: translate3d(0, 0, 0);
+	}
+	100% {
+		transform: translate3d(-1100px, 0, 0);
+	}
+}
+@media (max-width:767px) {
+	.slider-area h2 {
+		font-size: 30px;
+	}
+	.wrapper {
+		width: 95%;
+		border-radius: 0;
+		padding: 0;
+	}
+}
+
+    </style>
+</head>
+<body>
+	<div class="slider-area">
+		<div class="wrapper">
+			<div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=1j4Jjuc74DAQE4L_k7333RVSYp5eO1hNU"></div>
+			<div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=106J-MIUEDyTsJM7VWmBFLk_KHyUMsp5a"></div>
+			<div class="item"><img alt="" src="http://drive.google.com/uc?export=1FQmMtAaTnxA0S3tZoxHx4nBt8IrUhorx"></div>
+			<div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=1pyiGJxVKkI4BfPNpsNlEgyIeqcDA0ZAI"></div>
+			<div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=1bOqoSeoPb9WTLJ2Vklv2SDGsko-yW0qd"></div>
+            <div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=1doMnBwlpZZ5P_KaL6qacLeX38UKVLlnZ"></div>
+            <div class="item"><img alt="" src="http://drive.google.com/uc?export=view&id=13IWxIKZl4Z9OhfOdkCeXK794U3F1-qig"></div>
+		</div>
+	</div>
+</body>
+</html>

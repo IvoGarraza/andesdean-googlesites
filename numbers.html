@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 25%;
+        }
+
+        .number {
+            margin-left: 5px;
+        }
+
+        .number span {
+            font-size: xxx-large;
+            font-weight: bold;
+        }
+
+        .texts {
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            font-size:large;
+            margin-left: 10px;
+        }
+
+        .bar {
+            width: 10px;
+            height: 100%;
+            background: rgb(5, 42, 73);
+            background: linear-gradient(0deg, #052a49 0%, #a22224 62%);
+        }
+    </style>
+</head>
+
+<body onload="iniciarContadores()">
+    <div class="card">
+        <div class="bar"></div>
+        <div style="display: flex; flex-direction: column;justify-content: center;">
+            <div class="number">
+               <span>+<span class="contador" data-objetivo="17">0</span></span>
+            </div>
+            <div class="texts">
+                <span>Years empowering structures</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="bar"></div>
+        <div style="display: flex; flex-direction: column;justify-content: center;">
+            <div class="number">
+                <span>+<span class="contador" data-objetivo="356">0</span></span>
+            </div>
+            <div class="texts">
+                <span>Projects worldwide</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="bar"></div>
+        <div style="display: flex; flex-direction: column;justify-content: center;">
+            <div class="number">
+                <span>+<span class="contador" data-objetivo="150">0</span></span>
+            </div>
+            <div class="texts">
+                <span>Loyal recurrent clients</span>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="bar"></div>
+        <div style="display: flex; flex-direction: column;justify-content: center;">
+            <div class="number">
+                <span>+<span class="contador" data-objetivo="25">0</span></span>
+            </div>
+            <div class="texts">
+                <span>Software tools</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        function actualizarContador(elemento, numeroObjetivo) {
+          var valorActual = parseInt(elemento.textContent);
+      
+          if (valorActual < numeroObjetivo) {
+            elemento.textContent = valorActual + 1;
+            setTimeout(function() {
+              actualizarContador(elemento, numeroObjetivo);
+            }, 100); // Reduje el tiempo para que la animación sea más rápida
+          }
+        }
+      
+        function iniciarContadores() {
+          var contadores = document.querySelectorAll('.contador');
+      
+          contadores.forEach(function(contador) {
+            var numeroObjetivo = parseInt(contador.getAttribute('data-objetivo'));
+            actualizarContador(contador, numeroObjetivo);
+          });
+        }
+      </script>
+</body>
+
+</html>

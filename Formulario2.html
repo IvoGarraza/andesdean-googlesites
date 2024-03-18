@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: #b7b7b7;
+        }
+
+        .contenedor {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .formulario {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ffffff;
+            border-radius: 10px 10px 10px 10px;
+            -webkit-border-radius: 10px 10px 10px 10px;
+            -moz-border-radius: 10px 10px 10px 10px;
+            padding: 2%;
+            margin-top: 2%;
+        }
+
+        .inputs-formulario {
+            overflow: scroll;
+            overflow-x: auto;
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+            justify-content: end;
+            justify-items: end;
+            text-align: end;
+            overflow-y: scroll;
+        }
+
+        .inputs-formulario div {
+            display: flex;
+            justify-content: end;
+            margin-bottom: 4%;
+        }
+
+        .inputs-formulario div label {
+            margin-right: 2%;
+            height: 10%;
+        }
+
+        .inputs-formulario div input {
+            height: 90%;
+        }
+
+        .formulario h3 {
+            text-align: center;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 10%;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #555;
+        }
+
+        .cont {
+            display: flex;
+            flex-direction: row;
+            width: max-content;
+        }
+
+        .progreso {
+            margin-top: 5%;
+            margin-bottom: 5%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .progreso span {
+            background-color: #56B5AF;
+            padding-left: 3%;
+            padding-right: 3%;
+            padding-top: 2%;
+            padding-bottom: 2%;
+            border-radius: 50%;
+            color:white;
+            font-weight: bold;
+        }
+
+        /*         .progreso div {
+            height: 2px;
+            background-color: #b7b7b7;
+            width: 100%;
+        } */
+
+        /*         .progreso .primer-barra {
+            background-color: #00ffff;
+        } */
+
+        .div-form {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+        }
+
+        .div-form label {
+            width: 30%;
+
+        }
+
+        .div-form input {
+            width: 70%;
+        }
+
+        .div-form select {
+            width: 70%;
+        }
+
+        /* Estilo inicial de las barras */
+        .barra {
+            background-color: #eaeaea;
+            height: 2px;
+            width: 100%;
+        }
+
+        /* Estilo cuando la clase 'blanco' se aplica */
+        .blanco {
+            background-color: #56B5AF;
+            height: 2px;
+            width: 100%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="formulario">
+            <h3>REGISTRO DE ACCIDENTE LABORAL - PERSONAL PROPIO</h3>
+            <div class="progreso">
+                <span>1</span>
+                <div class="barra primer-barra"></div>
+                <span>2</span>
+                <div class="barra segunda-barra"></div>
+                <span>3</span>
+            </div>
+            <div class="inputs-formulario">
+                <div class="div-form d-flex flex-row">
+                    <label>Nombre y Apellido</label>
+                    <input type="text" placeholder="Nombre" />
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>Unidad de Negocio</label>
+                    <input type="number" />
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>Fecha</label>
+                    <input type="date" />
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>Centro de gestion</label>
+                    <input type="time" />
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>Horario de trabajo. De</label>
+                    <input type="time" />a<input type="time" />
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>¿Cumple horario rotativo?</label>
+                    <input type="checkbox" /><span>si</span>
+                    <input type="checkbox" /><span>no</span>
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <label>Select</label>
+                    <select>
+                        <option value="">opcion1</option>
+                        <option value="">opcion2</option>
+                        <option value="">opcion3</option>
+                        <option value="">opcion4</option>
+                    </select>
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <select multiple="multiple" style="height: 24pt">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                    </select>
+                </div>
+                <div class="div-form d-flex flex-row">
+                    <input type="file" id="myFile" name="filename">
+                    <input type="submit">
+                </div>
+
+                <div class="d-flex flex-row">
+                    <button>Cancelar</button>
+                    <button>Anterior</button>
+                    <button>Guardar y cerrar</button>
+                    <button id="cambiarEstilo">Siguiente</button>
+                </div>
+
+            </div>
+        </div>
+</body>
+<script>
+// Obtenemos las barras
+const barras = document.querySelectorAll('.barra');
+
+// Obtenemos el botón
+const botonCambiarEstilo = document.getElementById('cambiarEstilo');
+
+// Variable para llevar un seguimiento de la barra actual
+let barraActual = 0;
+
+// Función para cambiar el estilo de la barra actual
+function cambiarEstiloDeBarra() {
+    barras[barraActual].classList.toggle('blanco');
+    barraActual = (barraActual + 1) % barras.length;
+}
+
+// Agregamos un manejador de eventos al botón para llamar a la función
+botonCambiarEstilo.addEventListener('click', cambiarEstiloDeBarra);
+
+
+</script>
+</html>

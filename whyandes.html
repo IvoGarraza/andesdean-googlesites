@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: "Open Sans", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            height: 90%;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+           /*  margin: 50px auto; */
+            overflow: hidden;
+            font-size: x-large;
+        }
+
+        .carousel-slide {
+            display: none;
+            text-align: center;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+
+        .prev-btn,
+        .next-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px;
+            /* background-color: #000; */
+            color: #000;
+            border: none;
+            cursor: pointer;
+         /*    fill: black; */
+        }
+
+        .prev-btn {
+            left: 10px;
+        }
+
+        .next-btn {
+            right: 10px;
+        }
+    </style>
+
+    <title>Carrusel de Textos</title>
+</head>
+
+<body>
+
+    <div class="carousel-container">
+        <div class="carousel-slide" id="slide1">
+            <span style="font-weight: bold;">Time Zone Advantage</span>
+            <p>As a remote team we work within a similar time zone as our clients, enabling
+                seamless communication and collaboration throughout the projects.
+            </p>
+        </div>
+        <div class="carousel-slide" id="slide2">
+            <span style="font-weight: bold;">Cost-effective growth</span>
+            <p>Outsource with Andes Dean Engineering for a significant reduction in labor costs,
+                enabling efficient resource allocation and investment in critical areas of your organization's
+                development.
+            </p>
+        </div>
+        <div class="carousel-slide" id="slide3">
+            <span style="font-weight: bold;">Embracing Latest Software</span>
+            <p>We possess the knowledge and expertise to work seamlessly with a diverse range
+                of cutting-edge software, proactively learning and training our team in the industry to ensure the
+                delivery of comprehensive solutions.
+            </p>
+        </div>
+        <div class="carousel-slide" id="slide4">
+            <span style="font-weight: bold;">Full Project Lifecycle Coverage</span>
+            <p>With expertise covering all project stages defined by the Project
+                Management Institute (PMI), we offer end-to-end services, from initial conceptualization to
+                implementation and beyond, ensuring a holistic approach to project management and delivery.
+            </p>
+        </div>
+        <div class="carousel-slide" id="slide5">
+            <span style="font-weight: bold;">Collaborative Partnership</span>
+            <p>We prioritize on-site meetings to gain a deep understanding of our clients'
+                needs, values, and operational processes. By immersing ourselves in their environment, we become an
+                extension of their office to align with their goals.
+            </p>
+        </div>
+        <div class="prev-btn" onclick="changeSlide(-1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+              </svg>
+        </div>
+        <div class="next-btn" onclick="changeSlide(1)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
+              </svg>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function showSlide(n) {
+            const slides = document.getElementsByClassName("carousel-slide");
+
+            if (slides.length === 0) {
+                // Manejar el caso en el que no hay elementos en el carrusel
+                console.error("No se encontraron elementos en el carrusel");
+                return;
+            }
+
+            if (n > slides.length) {
+                currentSlide = 1;
+            }
+
+            if (n < 1) {
+                currentSlide = slides.length;
+            }
+
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[currentSlide - 1].style.display = "block";
+        }
+
+        function changeSlide(n) {
+            showSlide(currentSlide += n);
+        }
+
+        // Mostrar el primer slide al cargar la página
+        showSlide(currentSlide);
+
+    </script>
+</body>
+
+</html>

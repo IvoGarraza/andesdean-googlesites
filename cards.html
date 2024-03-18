@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+      body{
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 2%;
+        overflow: hidden;
+      }
+.carousel {
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+background-color: #2F4D67;
+position: absolute;
+/* margin-top: 0;
+margin-bottom: 0; */
+margin-right: 80%;
+margin-top: 0%;
+}
+.carouselUno{
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+background-color: #B24748;
+position: absolute;
+/* margin-top: 0;
+margin-bottom: 0; */
+margin-right: 90%;
+margin-top: 0%;
+}
+.infoContainer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+ background-color: #CDCDCE;
+ color: white;
+ font-family: 'Open Sans', sans-serif;
+ -webkit-border-top-right-radius: 20px;
+-webkit-border-bottom-right-radius: 20px;
+-moz-border-radius-topright: 20px;
+-moz-border-radius-bottomright: 20px;
+border-top-right-radius: 20px;
+border-bottom-right-radius: 20px;
+padding: 1%;
+margin-left: 10%;
+text-align: left;
+margin-right: 5%;
+/* margin-bottom: 30%;
+margin-top: 30%; */
+}
+.firstSpan{
+  font-weight: bolder;
+  color: #2F4D67;
+}
+.secondSpan{
+  font-weight: normal;
+}
+
+    </style>
+    <script src="text/javascript">
+
+    </script>
+</head>
+<body>
+  <div class="carouselUno">
+  </div>
+    <div class="carousel">
+    </div>
+    <div class="infoContainer">
+      <span class="firstSpan">Location: <span class="secondSpan">Midvale, Utah, US</span></span>
+      <span class="firstSpan">Period: <span class="secondSpan">2022</span></span>
+      <span class="firstSpan">Team: <span class="secondSpan">Andes Dean and Partners</span></span>
+    </div>
+</body>
+</html>
