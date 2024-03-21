@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+        }
+        .container{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 10px;
+            grid-row-gap: 0px;
+        }
+        .card{
+            background-color: red;
+            width: 100%;
+            background-size: cover;
+            border: 1px solid black;
+            grid-column: span 1 / span 1;
+            cursor: pointer;
+            transition: all 0.3s ease; /* Añadimos una transición suave para los cambios */
+        }
+
+        /* Estilos adicionales para cuando el card ocupa 2 columnas */
+        .card.double-width {
+            grid-column: span 2 / span 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card double-width" style="background-image: url(https://i.postimg.cc/dQC6NffQ/howwework1.jpg);" onclick="toggleCardWidth(this)">
+            <span>Project Quote</span>
+        </div>
+        <div class="card" onclick="toggleCardWidth(this)">
+            <span>Project Kick-off</span>
+        </div>
+        <div class="card" onclick="toggleCardWidth(this)">
+            <span>Project Planning</span>
+        </div>
+        <div class="card" onclick="toggleCardWidth(this)">
+            <span>Project Execution</span>
+        </div>
+        <div class="card" onclick="toggleCardWidth(this)">
+            <span>Project Wrap-up</span>
+        </div>
+        <div class="card" onclick="toggleCardWidth(this)">
+            <span>Project Delivery</span>
+        </div>
+    </div>
+
+    <script>
+        function toggleCardWidth(card) {
+            // Obtener todos los cards
+            var cards = document.querySelectorAll('.card');
+        
+            // Cambiar la propiedad de grid-column de todos los cards a span 1 / span 1
+            cards.forEach(function(card) {
+                card.classList.remove('double-width');
+            });
+        
+            // Agregar la propiedad de grid-column span 2 / span 2 al card clicado
+            card.classList.add('double-width');
+        }
+    </script>
+</body>
+</html>

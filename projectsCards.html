@@ -9,13 +9,114 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
     <style>
+        *{
+            margin: 0px;
+        }
         body{
             font-family: "Open Sans", sans-serif;
+            display: flex;
+             justify-content: center;
+             align-items: center;
+             width:100%;
+             height: 100vh;
         }
+        .container{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            height: 100%;
+        }
+        .card{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            justify-content: end;
+            align-items: end;
+        }
+        .card img{
+            position: absolute;
+            width: 100%;
+            top:-10%;
+        }
+        .card span{
+            z-index: 10;
+            color: white;
+            width: 100%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            opacity: 0;
+            
+        }
+        .fondo{
+            background-color: black;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            opacity: 0;
+        }
+
+        .card:hover .fondo{
         
+            opacity: 0.6;
+        }
+
+        .card:hover span{
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="container">
+        <div class="card" onclick="window.open('https://www.andesdean.pro/palais-550-townhomes','_blank');">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/sXYGXrnt/AND-Portfolio-Diego-Dean-EN-03-pptx.jpg"/>
+            <span style="font-weight: bold;">Palais 550 Townhomes</span>
+            <span>STRUCTURAL CALCULATIONS</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/custom-homes')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/4dfs6R4C/custom-Homes.png"/>
+            <span style="font-weight: bold;">Custom Homes</span>
+            <span>STRUCTURAL CALCULATIONS</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/housing-del-parque')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/9Mg5y4NT/housing1.jpg"/>
+            <span style="font-weight: bold;">Housing del Parque</span>
+            <span>LIGHT STEEL FRAMING</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/coca-cola-company-warehouse-extension')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/KYn875nT/cocacola1.png"/>
+            <span style="font-weight: bold;">Coca Cola Company Warehouse Extension</span>
+            <span>PROJECTS & CONTRUCTION INSPECTIONS</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/gables-river-oaks')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/bwfX0fL6/institutional2.jpg"/>
+            <span style="font-weight: bold;">Gables Rivers Oaks</span>
+            <span>BIM MODELING FOR DDs & COORDINATION</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/sun-city-mesquite')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/Mp7Cd3Fz/residential.jpg"/>
+            <span style="font-weight: bold;">Sun City Mesquite</span>
+            <span>WOOD FRAMING DESIGN</span>
+        </div>
+        <div class="card" onclick="window.open('https://www.andesdean.pro/perth-international-airport')">
+            <div class="fondo"></div>
+            <img src="https://i.postimg.cc/SRj4PLzD/AND-Portfolio-Diego-Dean-EN-03-pptx-2.png"/>
+            <span>Perth International Airport</span>
+            <span>BIM MODELING FOR DDs & COORDINATION</span>
+        </div>
+    </div>
 </body>
 </html>

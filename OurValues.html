@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+        }
+        body{
+            font-family: "Open Sans", sans-serif;
+            height: 100vh;
+        }
+        .container{
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            flex-direction: row;
+            height: 100%;
+            width: 100%;
+        }
+        .div1,.div2{
+            width: 50%;
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+        }
+        .div1 .cuadrilla .card{
+            background-color: #052A49;
+        }
+        .div2 .cuadrilla .card{
+            background-color: #A22224;
+        }
+        .card{
+            color: white;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+            width: 95%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .card .cardTitle{
+            height: 40%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card .cardText{
+            height: 60%;
+        }
+        .cuadrilla{
+            width: 100%;
+            height: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            justify-items: center;
+            align-items: center;
+        }
+        .title{
+            height: 20%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">
+            <div class="title">
+                <span>Our mission</span>
+            </div>
+            <div class="cuadrilla">
+                <div class="card">
+                    <div class="cardTitle">
+                        <h2>Applied technologies</h2>
+                    </div>
+                    <div class="cardText"><span>By harnessing applied technologies such as BIM, Revit, IT, data analytics, agile surveying, and automated processing, we drive tech-driven solutions.</span></div>
+                </div>
+                <div class="card">
+                    <h2>Innovation</h2>
+                    <div><span>Our focus on innovation extends to embracing prefabrication, industrialization, and LEAN principles</span></div>
+                </div>
+                <div class="card">
+                    <h2>Project management</h2>
+                    <div><span>With our commitment to project management excellence, guided by the Project Management Institute and agile development, we ensure standards and evolutionary management practices.</span></div>
+                </div>
+                <div class="card">
+                    <h2>Customer Satisfaction</h2>
+                    <div><span>We prioritize client satisfaction. We work closely with our clients to understand their needs and deliver solutions that exceed expectations. Our customer-centric approach ensures trust and transparency in every project.</span></div>
+                </div>
+            </div>
+        </div>
+        <div class="div2">
+            <div class="title">
+                <span >Our values</span>
+            </div>
+            <div class="cuadrilla">
+                <div class="card">
+                    <h2>Team work</h2>
+                    <div><span>At Andes Dean Engineering, we prioritize collaboration and synergy in all our endeavors.</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h2>Attention to Details</h2>
+                    <div><span>Our meticulous approach ensures precision in every aspect of our work.</span></div>
+                </div>
+                <div class="card">
+                    <h2>Responsibility</h2>
+                    <div><span>We uphold accountability and reliability in all our commitments.</span></div>
+                </div>
+                <div class="card">
+                    <h2>Fast-Learning</h2>
+                    <div><span>Our adaptive nature facilitates rapid learning to innovate and excel.</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

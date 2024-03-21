@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        *{
+            margin: 0px;
+        }
+        body{
+            width: 100%;
+            font-family: "Open Sans", sans-serif;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+            grid-column-gap: 10px;
+            grid-row-gap: 10px;
+            width: 100%;
+            }
+            .imgContainer {
+            position: relative;
+        }
+        .imgContainer:hover {
+            .desc {
+                visibility: visible;
+                font-size: large;
+                filter: grayscale(0);
+            }
+        }
+        .imgContainer img {
+            width: 100%;
+        }
+
+        img {
+            filter: grayscale(1);
+        }
+
+        
+        .desc {
+            position: absolute;
+            z-index: 5;
+            font-weight: bold;
+            visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #00000030;
+            color: white;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+
+        .imgContainer {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="imgContainer">
+                <span class="desc">Nahola<br /><span style="font-weight: normal;">Structural Engineer</span></span>
+                <img  src="https://ca.slack-edge.com/T42HA9JJF-U04SLAWESCS-59a17957afaf-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Aldo<br /><span style="font-weight: normal;">Structural Engineer</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U0357SGBF1T-8451feab56a6-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Carolina<br /><span style="font-weight: normal;">Project Manager</span></span>
+                <img src="https://i.postimg.cc/FRHHw0Ph/Foto-perfil.jpg" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Cristian<br /><span style="font-weight: normal;">Architect / Designer</span></span>
+                <img src="https://i.postimg.cc/Gtsd1Kvn/Foto-carnet.png" />
+            </div>
+        
+            <div class="imgContainer">
+                <span class="desc">Carlina<br />Architect / Designer</span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U04P347ND8D-b0788daeeb74-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Vanina<br /><span style="font-weight: normal;">Director of Bussines
+                        Development</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U052V33DT32-c8e7097b6f2a-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Lucrecia<br /><span style="font-weight: normal;">Human Capital</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U035P0VHT4H-529e78424158-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Ivo<br /><span style="font-weight: normal;">Software Developer / Helpdesk</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U05217UU4AZ-4efa633d4627-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Raquel<br /><span style="font-weight: normal;">Software Developer</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U5DK88GFN-ad547219404a-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Tomas<br /><span style="font-weight: normal;">Designer</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-UPTMQUY8N-a0adaa100732-512" />
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Analia<br /><span style="font-weight: normal;">Tester</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U065J4THP7C-9075c6d268b7-512"/>
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Emiliano<br /><span style="font-weight: normal;">Software Developer</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-UR68J9R4Y-c405c43cb690-512"/>
+            </div>
+            <div class="imgContainer">
+                <span class="desc">Julian<br /><span style="font-weight: normal;">Software Developer</span></span>
+                <img src="https://ca.slack-edge.com/T42HA9JJF-U5CTK8ZKJ-f55173f0a867-512" />
+            </div>
+            <div class="imgContainer">
+                <img src="https://i.postimg.cc/VLM9qDjY/logo-sin-fondo.png"/>
+            </div>
+            <div class="imgContainer">
+                <img src="https://i.postimg.cc/VLM9qDjY/logo-sin-fondo.png"/>
+            </div>
+    </div>
+</body>
+</html>
